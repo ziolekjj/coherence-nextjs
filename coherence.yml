@@ -1,6 +1,17 @@
-backend:
+app1:
   type: backend
   url_path: /
-  local_packages: ["node_modules"]
+  local_packages: ["applications/app1/node_modules", "node_modules"]
   dev: ["npm", "run", "dev"]
-  prod: ["npm", "run", "start"]
+  prod: 
+    command: ["npm", "run", "start"]
+    dockerfile: "applications/app1/Dockerfile"
+
+app2:
+  type: backend
+  url_path: /
+  local_packages: ["applications/app2/node_modules", "node_modules"]
+  dev: ["npm", "run", "dev"]
+  prod: 
+    command: ["npm", "run", "start"]
+    dockerfile: "applications/app2/Dockerfile"
