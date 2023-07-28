@@ -1,6 +1,6 @@
 app1:
   type: backend
-  url_path: /
+  url_path: /app1
   local_packages: ["applications/app1/node_modules", "node_modules"]
   dev: ["npm", "run", "dev"]
   prod: 
@@ -9,7 +9,7 @@ app1:
 
 app2:
   type: backend
-  url_path: /
+  url_path: /app2
   local_packages: ["applications/app2/node_modules", "node_modules"]
   dev: ["npm", "run", "dev"]
   prod: 
