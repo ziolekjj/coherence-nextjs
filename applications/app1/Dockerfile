@@ -2,10 +2,9 @@ FROM node:16
 
 WORKDIR /app
 
+COPY applications/app1/package.json applications/app1/package.json
+COPY applications/app1/package-lock.json applications/app1/package-lock.json
 RUN cd applications/app1
-
-COPY package.json package.json
-COPY package-lock.json package-lock.json
 RUN npm install
 
 COPY . .
