@@ -9,7 +9,9 @@ RUN ls -alR
 WORKDIR /app/applications/app1
 RUN npm install
 
+WORKDIR /app
 COPY . .
+WORKDIR /app/applications/app1
 RUN npm run build
 
 CMD ["npm", "run", "start"]
